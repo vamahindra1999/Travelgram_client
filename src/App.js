@@ -80,7 +80,7 @@ function App() {
           <Route path="/feedback" exact component={Feedback} />
 
           <Route path="/tag/:tags" exact component={ThemePage} />
-          <Route component={PageNotFound} />
+          {/* <Route component={PageNotFound} /> */}
         </Switch>
         {/* <Footer /> */}
       </Router>
