@@ -49,7 +49,7 @@ function App() {
         {/* <Navbar /> */}
         <Switch>
           {/* Authentication routes */}
-          <Route path="/" component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/role/:action" component={Role} />
           <Route path="/usersignup" exact component={UserSignup} />
           <Route path="/userlogin" exact component={UserLogin} />
