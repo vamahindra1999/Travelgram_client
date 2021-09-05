@@ -46,19 +46,19 @@ const UserSignup = () => {
   return (
     <>
       <div className="usersignupbody">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 col-xl-9 mx-auto">
-              <div class="card card-signin flex-row my-5">
-                <div class="card-img-left d-none d-md-flex"></div>
-                <div class="card-body">
-                  <h5 class="card-title text-center">Register</h5>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-10 col-xl-9 mx-auto">
+              <div className="card card-signin flex-row my-5">
+                <div className="card-img-left d-none d-md-flex"></div>
+                <div className="card-body">
+                  <h5 className="card-title text-center">Register</h5>
                   <form
-                    class="form-signin"
+                    className="form-signin"
                     onSubmit={onSubmit}
                     autoComplete="off"
                   >
-                    <div class="form-label-group">
+                    <div className="form-label-group">
                       <input
                         type="text"
                         className="form-control"
@@ -71,7 +71,7 @@ const UserSignup = () => {
                         autoFocus
                       />
                     </div>
-                    <div class="form-label-group">
+                    <div className="form-label-group">
                       <input
                         type="email"
                         className="form-control"
@@ -81,7 +81,7 @@ const UserSignup = () => {
                         value={user.email}
                       />
                     </div>
-                    <div class="form-label-group">
+                    <div className="form-label-group">
                       <input
                         type="text"
                         className="form-control"
@@ -93,7 +93,7 @@ const UserSignup = () => {
                         value={user.phone}
                       />
                     </div>
-                    <div class="form-label-group">
+                    <div className="form-label-group">
                       <input
                         type="password"
                         className="form-control"
@@ -105,13 +105,13 @@ const UserSignup = () => {
                     </div>
 
                     <button
-                      class="btn btn-lg btn-primary btn-block text-uppercase"
+                      className="btn btn-lg btn-primary btn-block text-uppercase"
                       type="submit"
                     >
                       Register
                     </button>
                     <NavLink
-                      class="d-block text-center mt-2 small"
+                      className="d-block text-center mt-2 small"
                       to="/userlogin"
                     >
                       Sign In

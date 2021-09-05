@@ -3,15 +3,15 @@ import "./css/main.css";
 import ThemeItem from "./ThemeItem";
 import { NavLink } from "react-router-dom";
 function Theme() {
-  const Hot = "Hot";
+  // const Hot = "Hot";
   return (
     <>
       <div className="section-theme col-10 mx-auto my-5">
-        <p className="section-heading text-center mt-3 mb-1 mx-3 ">
+        <p className="title-style text-center mt-3 mb-1 mx-3 ">
           Travel themes
         </p>
         <div className="theme-list ">
-          <NavLink to={`/tag/${Hot}`} exact className="text-decoration-none">
+          <NavLink to="/tag/Hot" exact className="text-decoration-none">
             <ThemeItem src="../images/img-8.jpg" label="Hot" />
           </NavLink>
           <NavLink to="/tag/Peace" exact className="text-decoration-none">
@@ -21,7 +21,7 @@ function Theme() {
             <ThemeItem src="../images/img-9.jpg" label="Aqua" />
           </NavLink>
           <NavLink to="/tag/Mountain" exact className="text-decoration-none">
-            <ThemeItem src="../images/img-home.jpg" label="Mountain" />
+            <ThemeItem src="../images/nature.jpg" label="Mountain" />
           </NavLink>
         </div>
       </div>

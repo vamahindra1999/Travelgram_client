@@ -8,7 +8,7 @@ function Cards() {
 
   return (
     <div className='cards'>
-      <h1>Travelogues</h1>
+      <h1 className="title-style">Travelogues</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
          
