@@ -9,16 +9,14 @@ function HeroSection() {
       <h1>Travelgram</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">
-        <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
+        <button
+          className="btn btn--outline shadow-none"
           onClick={()=>{
             window.scrollTo({top:760,behavior:"smooth"})
           }}
         >
           Explore
-        </Button>
+        </button>
       </div>
     </div>
   );

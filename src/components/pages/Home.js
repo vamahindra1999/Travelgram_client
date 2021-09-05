@@ -25,7 +25,7 @@ function Home() {
 
   const ScrollToTop = () => (
     <button
-      className="btn btn-success "
+      className="btn btn-success shadow-none"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       Go to Top
