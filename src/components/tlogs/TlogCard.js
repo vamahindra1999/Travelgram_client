@@ -8,7 +8,7 @@ function TlogCard(props) {
     <>
       <div className="card tlog__card ">
         <img
-          src={baseUrl + `${props.Pictures}`}
+          src={props.Pictures}
           className="card-img-top"
           alt="Image"
         />

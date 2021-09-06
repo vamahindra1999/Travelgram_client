@@ -11,7 +11,7 @@ function CitypageItem(props) {
             <img
               height="200px"
               width="350px"
-              src={baseUrl + `${props.Pictures}`}
+              src={props.Pictures}
               alt="imge"
             />
           </div>

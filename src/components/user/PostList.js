@@ -94,7 +94,7 @@ function PostList(props) {
                         width="350px"
                         alt="image"
                         className=""
-                        src={baseUrl + `${blog.Pictures}`}
+                        src={blog.Pictures}
                       />
                     </div>
                   </div>

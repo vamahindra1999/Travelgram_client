@@ -49,7 +49,7 @@ function BlogRequest({ id }) {
                         height="200px"
                         width="300px"
                         className=""
-                        src={baseUrl + `${blog.Pictures}`}
+                        src={blog.Pictures}
                         alt="Card image cap"
                       />
                     </div>

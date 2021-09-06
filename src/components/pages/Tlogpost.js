@@ -8,7 +8,7 @@ function Tlogpost() {
   const [userDetail, setUserDetail] = useState([]);
   // const token = localStorage.getItem("token");
 
-  console.log(id);
+  // console.log(id);
   useEffect(() => {
     authUser
       .get(`/blogs/${id}`)
@@ -16,7 +16,7 @@ function Tlogpost() {
         setBlog(res.data.blog);
         setUserDetail(res.data.blog.user);
         // console.log(userDetail);
-        console.log(res.data.blog);
+        // console.log(res.data.blog);
         // let onlyDate = blog.date.split('T')[0];
         // alert(onlyDate);
       })
@@ -43,7 +43,7 @@ function Tlogpost() {
               className="my-4 border-black"
               width="750px"
               height="400px"
-              src={baseUrl + `${blog.Pictures}`}
+              src={blog.Pictures}
               alt=""
             />
 

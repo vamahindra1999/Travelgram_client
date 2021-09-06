@@ -40,7 +40,7 @@ function ViewBlog() {
                 className="my-4 border-black"
                 width="750px"
                 height="400px"
-                src={baseUrl + `${blog.Pictures}`}
+                src={blog.Pictures}
                 alt="Card image cap"
               />
               <p className="lead my-4 my-auto">{blog.Body}</p>

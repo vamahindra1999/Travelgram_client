@@ -18,8 +18,8 @@ const customStyles = {
   },
 };
 function CreatePost() {
-  const { register, handleSubmit }= useForm();
- 
+  const { register, handleSubmit } = useForm();
+  const [imageLink, setImagelink] = useState();
   //Modal Handlers
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalOpener = () => {
@@ -27,6 +27,22 @@ function CreatePost() {
   };
   const onRequestClose = () => {
     setModalIsOpen(false);
+  };
+
+  const uploadImage = async (e) => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "travelgram");
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/duja4ggya/image/upload",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+    const file = await res.json();
+    setImagelink(file.secure_url);
   };
 
   // const [blog, setBlog] = useState({
@@ -46,22 +62,28 @@ function CreatePost() {
   //     };
   //   });
   // };
+
   const sendHandler = (blog) => {
-    // if (blog.Title && blog.Body && blog.Tags ) 
+    // if (blog.Title && blog.Body && blog.Tags )
     {
-      const formData = new FormData();
-      formData.append("Title",blog.Title);
-      formData.append("Pictures",blog.Pictures[0]);
-      formData.append("Location",blog.Location);
-      formData.append("Body",blog.Body);
-      formData.append("Tags",blog.Tags);
-     
-      console.log(formData);
+      const dataObject = {
+        Title: blog.Title,
+        Pictures: imageLink,
+        Location: blog.Location,
+        Body: blog.Body,
+        Tags: blog.Tags,
+      };
+      // formData.append("Title", blog.Title);
+      // formData.append("Pictures", imageLink);
+      // formData.append("Location", blog.Location);
+      // formData.append("Body", blog.Body);
+      // formData.append("Tags", blog.Tags);
+
       setModalIsOpen(false);
       authUser
-        .post(`/blogs`, formData)
+        .post(`/blogs`, dataObject)
         .then((response) => {
-          // console.log(blog);
+          console.log(blog);
           // console.log(response);
         })
         .catch((error) => console.log(error));
@@ -98,10 +120,10 @@ function CreatePost() {
                     <input
                       type="file"
                       className="form-control"
-                    ref={register}
-
+                      ref={register}
                       id="Pictures"
                       name="Pictures"
+                      onChange={uploadImage}
                       // value={blog.Pictures}
                       // onChange={inputEvent}
                       placeholder="Pictures"
@@ -129,8 +151,8 @@ function CreatePost() {
                     <input
                       type="text"
                       className="form-control"
-                    ref={register}
-                    id="Tags"
+                      ref={register}
+                      id="Tags"
                       name="Tags"
                       // value={blog.Tags}
                       // onChange={inputEvent}

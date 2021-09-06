@@ -26,7 +26,7 @@ const UserSignup = () => {
     if (user.email && user.fullName && user.password && user.phone) {
       // console.log(user); //data sent by form
       axios
-        .post("/users/signup", {
+        .post("/auth/signup", {
           name: user.fullName,
           email: user.email,
           password: user.password,

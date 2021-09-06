@@ -33,7 +33,7 @@ const UserLogin = () => {
     // e.preventDefault();
     console.log(user); // sent object
     axios
-      .post("/users/login", {
+      .post("/auth/login", {
         email: user.email,
         password: user.password,
       })

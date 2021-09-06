@@ -30,7 +30,7 @@ function ThemePageItem(props) {
                         height="200px"
                         width="350px"
                         className=""
-                        src={baseUrl + `${blog.Pictures}`}
+                        src={blog.Pictures}
                       />
                     </div>
                   </div>

@@ -33,7 +33,7 @@ export default function Citypage() {
               <img
                 className="img-fluid rounded mb-4 mb-lg-0"
                 style={{ height: "300px", width: "800px" }}
-                src={baseUrl + `${blog.Pictures}`}
+                src={blog.Pictures}
                 alt=""
               />
             </div>
