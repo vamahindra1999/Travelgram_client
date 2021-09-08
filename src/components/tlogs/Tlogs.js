@@ -26,16 +26,14 @@ export default function Tlogs() {
       <div className="travel-container">
         <h1>Travelogues</h1>
         <div className="hero-btns">
-          <Button
-            className="btns"
-            buttonStyle="btn--outline"
-            buttonSize="btn--large"
+          <button
+            className="btn btn--outline shadow-none"
             onClick={() => {
               window.scrollTo({ top: 760, behavior: "smooth" });
             }}
           >
             Explore
-          </Button>
+          </button>
         </div>
       </div>
       <div className="container">
