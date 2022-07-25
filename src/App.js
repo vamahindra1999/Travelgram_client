@@ -31,17 +31,17 @@ import AdminFeedback from "./components/auth/admin/AdminFeedback";
 import Feed from "./components/auth/admin/Feed";
 import ViewFeedback from "./components/auth/admin/ViewFeedback";
 
-export const baseUrl = "http://54.160.246.57:5000/";
+export const baseUrl = "http://54.91.211.142:5000/";
 const token = localStorage.getItem("token");
 export const authUser = axios.create({
-  baseURL: "http://54.160.246.57:5000/",
+  baseURL: "http://54.91.211.142:5000/",
   headers: {
     Authorization: `Bearer ${token}`,
   },
 });
 
 function App() {
-  axios.defaults.baseURL = "http://54.160.246.57:5000/";
+  axios.defaults.baseURL = "http://54.91.211.142:5000/";
 
   return (
     <>
